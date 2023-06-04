@@ -1,6 +1,6 @@
 function computerPlay() {
   const choices = ['piedra', 'papel', 'tijera'];
-  const randomIndex = Math.floor(Math.random() * choices.lenght);
+  const randomIndex = Math.floor(Math.random() * choices.length);
   return choices [randomIndex]; 
 }
 
@@ -32,7 +32,7 @@ function game() {
       playerScore++;
     } else if (result.includes('Perdiste')) {
       computerScore++;
-    }
+    } 
   }
 
   console.log('Puntaje Final:');
@@ -43,6 +43,8 @@ if (playerScore > computerScore) {
   alert('Felicitaciones! Ganaste!');
 } else if (playerScore < computerScore) {
   alert('Lo lamento, perdiste!');
+} else {
+  alert("Es un empate");
 }
 }
 

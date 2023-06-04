@@ -1,11 +1,12 @@
 function computerPlay() {
   const choices = ['piedra', 'papel', 'tijera'];
-  return choices; 
+  const randomIndex = Math.floor(Math.random() * choices.lenght);
+  return choices [randomIndex]; 
 }
 
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = playerSelection();
+  playerSelection = playerSelection.toLowerCase();
 
   if (
     (playerSelection === 'piedra' && computerSelection === 'tijera') || (playerSelection === 'papel' && computerSelection === 'piedra') || (playerSelection === 'tijera' && computerSelection === 'papel')) 
@@ -17,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game () {
+function game() {
   let playerScore = 0;
   let computerScore = 0;
   let rounds = 3;
@@ -34,4 +35,12 @@ function game () {
       computerScore++;
     }
   }
+
+  console.log('Puntaje Final:');
+  console.log('Jugador: ' + playerScore);
+  console.log('Computer: ' + computerScore);
 }
+
+
+
+game();

@@ -4,7 +4,6 @@ function computerPlay() {
   return choices [randomIndex]; 
 }
 
-
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
 
@@ -39,8 +38,12 @@ function game() {
   console.log('Puntaje Final:');
   console.log('Jugador: ' + playerScore);
   console.log('Computer: ' + computerScore);
+
+if (playerScore > computerScore) {
+  alert('Felicitaciones! Ganaste!');
+} else if (playerScore < computerScore) {
+  alert('Lo lamento, perdiste!');
 }
-
-
+}
 
 game();
